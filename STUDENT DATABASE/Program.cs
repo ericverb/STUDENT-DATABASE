@@ -1,7 +1,7 @@
 ﻿string[] names = new[]
     {"Bobby", "Sarah", "Marc", "Taylor", "Rushi"};
 string[] homeTown = new[]
-    {"Detroit", "Utica", "Farmington Hills", "Shelby Township", "West Bloomfield"};
+    {"White Lake", "Canton", "Royal Oak", "Shelby Township", "West Bloomfield"};
 string[] favoriteFood = new[]
     {"Pizza", "Spicy Chicken Sandwich", "Tacos", "Hamburger", "Sushi"};
 
@@ -11,8 +11,8 @@ while (goAgain)
 {
     Console.WriteLine(
         $"Welcome! Which student would you like to learn more about? Enter a number 1-{names.Length}! {Environment.NewLine}");
-    int studentNumber;
-    bool isValid = int.TryParse(Console.ReadLine(), out studentNumber);
+     int studentNumber;
+     bool isValid = int.TryParse(Console.ReadLine(), out studentNumber);
 
     while (studentNumber < 1 || studentNumber > names.Length)
     {
