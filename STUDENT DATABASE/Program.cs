@@ -1,9 +1,53 @@
-﻿string[] names = new[]
-    {"Bobby", "Sarah", "Marc", "Taylor", "Rushi"};
-string[] homeTown = new[]
-    {"White Lake", "Canton", "Royal Oak", "Shelby Township", "West Bloomfield"};
-string[] favoriteFood = new[]
-    {"Pizza", "Spicy Chicken Sandwich", "Tacos", "Hamburger", "Sushi"};
+﻿using System.IO;
+
+string filePathName = @"C:\Temp\name.txt";
+StreamReader readerName = new StreamReader(filePathName);
+string[] names= readerName.ReadToEnd().Split('|');
+readerName.Close();
+foreach (string name in names)
+{
+    Console.WriteLine(name);
+}
+
+
+string filePathFood = @"C:\Temp\food.txt";
+StreamReader readerFood = new StreamReader(filePathFood);
+string[] favoriteFood = readerFood.ReadToEnd().Split('|');
+readerFood.Close();
+foreach (string food in favoriteFood)
+{
+    Console.WriteLine(food);
+}
+
+string filePathHome = @"C:\Temp\home.txt";
+StreamReader readerHome = new StreamReader(filePathHome);
+string[] homeTown = readerHome.ReadToEnd().Split('|');
+readerHome.Close();
+foreach (string home in homeTown)
+{
+    Console.WriteLine(home);
+}
+//while (true)
+//{
+//    string line = reader.ReadLine();
+//    if (line == null)
+//        break;
+//    string [] names = line.Split(',');
+//    reader.Close();
+//    foreach (var part in parts)
+//    {
+//        Console.WriteLine(part);
+//    }
+//}
+
+//Console.ReadKey();
+
+//string[] names = new[]
+//   {"Bobby", "Sarah", "Marc", "Taylor", "Rushi"};
+//string[] homeTown = new[]
+  //  {"White Lake", "Canton", "Royal Oak", "Shelby Township", "West Bloomfield"};
+//string[] favoriteFood = new[]
+ //   {"Pizza", "Spicy Chicken Sandwich", "Tacos", "Hamburger", "Sushi"};
 
 bool goAgain = true;
 
